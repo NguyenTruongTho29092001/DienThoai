@@ -1,0 +1,75 @@
+﻿@model DO_AN_LAP_TRINH_WEB.Models.SanPham
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SanPham</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.maTH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.maTH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tenSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tenSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hinh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hinh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.giaban)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.giaban)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ngaycapnhat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngaycapnhat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.soluongton)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.soluongton)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mota)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mota)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.maSP }) |
+    @Html.ActionLink("Back to List", "ListSanPham")
+</p>

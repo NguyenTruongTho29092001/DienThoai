@@ -1,0 +1,70 @@
+﻿@model IEnumerable<DO_AN_LAP_TRINH_WEB.Models.SanPham>
+
+@{
+    ViewBag.Title = "ListSanPham";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ListSanPham</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.maTH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tenSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hinh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.giaban)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ngaycapnhat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.soluongton)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mota)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.maTH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tenSP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hinh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.giaban)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ngaycapnhat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.soluongton)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mota)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.maSP }) |
+            @Html.ActionLink("Details", "Details", new { id=item.maSP }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.maSP })
+        </td>
+    </tr>
+}
+
+</table>
