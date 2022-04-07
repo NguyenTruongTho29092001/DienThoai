@@ -607,6 +607,8 @@ namespace DO_AN_LAP_TRINH_WEB.Models
 		
 		private System.Nullable<System.DateTime> _ngaysinh;
 		
+		private System.Nullable<int> _admin;
+		
 		private EntitySet<DonHang> _DonHangs;
 		
     #region Extensibility Method Definitions
@@ -629,6 +631,8 @@ namespace DO_AN_LAP_TRINH_WEB.Models
     partial void OndienthoaiChanged();
     partial void OnngaysinhChanging(System.Nullable<System.DateTime> value);
     partial void OnngaysinhChanged();
+    partial void OnadminChanging(System.Nullable<int> value);
+    partial void OnadminChanged();
     #endregion
 		
 		public KhachHang()
@@ -793,6 +797,26 @@ namespace DO_AN_LAP_TRINH_WEB.Models
 					this._ngaysinh = value;
 					this.SendPropertyChanged("ngaysinh");
 					this.OnngaysinhChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_admin", DbType="Int")]
+		public System.Nullable<int> admin
+		{
+			get
+			{
+				return this._admin;
+			}
+			set
+			{
+				if ((this._admin != value))
+				{
+					this.OnadminChanging(value);
+					this.SendPropertyChanging();
+					this._admin = value;
+					this.SendPropertyChanged("admin");
+					this.OnadminChanged();
 				}
 			}
 		}

@@ -14,8 +14,25 @@ namespace DO_AN_LAP_TRINH_WEB.Controllers
         MyDataDataContext data = new MyDataDataContext();
         public ActionResult ListSanPham()
         {
+            KhachHang kh = (KhachHang)Session["TaiKhoan"];
             var all_sanpham = from ss in data.SanPhams select ss;
-            return View(all_sanpham);
+            //return View(all_sanpham);
+            if (Session["TaiKhoan"] == null)
+            {
+                return RedirectToAction("XacNhanAdmin", "GioHang");
+            }
+            else
+            {
+                if (kh.admin == 1)
+                {
+
+                    return View(all_sanpham);
+                }
+                else
+                {
+                    return RedirectToAction("DaXacNhanAdmin", "GioHang");
+                }
+            }
         }
         public ActionResult Details(int id)
         {
@@ -110,5 +127,6 @@ namespace DO_AN_LAP_TRINH_WEB.Controllers
             data.SubmitChanges();
             return RedirectToAction("ListSanPham");
         }
+
     }
 }

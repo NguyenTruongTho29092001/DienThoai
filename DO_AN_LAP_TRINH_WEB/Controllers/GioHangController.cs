@@ -162,5 +162,16 @@ namespace DO_AN_LAP_TRINH_WEB.Controllers
         {
             return View();
         }
+
+        public ActionResult XacNhanAdmin()
+        {
+            return View();
+        }
+        public ActionResult DaXacNhanAdmin()
+        {
+            return View();
+        }
+
+
     }
 }

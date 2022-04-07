@@ -32,6 +32,7 @@
       <Column Name="diachi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="dienthoai" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
       <Column Name="ngaysinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="admin" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="KhachHang_DonHang" Member="DonHangs" ThisKey="makh" OtherKey="makh" Type="DonHang" />
     </Type>
   </Table>

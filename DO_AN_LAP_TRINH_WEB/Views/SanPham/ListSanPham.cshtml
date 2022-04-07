@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>ListSanPham</h2>
+<h2 class="text-center text-primary">DANH SÁCH SẢN PHẨM</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -45,7 +45,7 @@
             @Html.DisplayFor(modelItem => item.tenSP)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.hinh)
+           <img src="@item.hinh">
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.giaban)
